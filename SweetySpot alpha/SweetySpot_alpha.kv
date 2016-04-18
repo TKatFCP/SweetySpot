@@ -63,8 +63,9 @@
     originalimage:originalimage
 
     breakoffcam:breakoffcam
-
-
+    jazzbreakoffcam:jazzbreakoffcam
+    influxcameracheckbox:influxcameracheckbox
+    jazzcameracheckbox:jazzcameracheckbox
 
 #secure tab ids
     securemode:securemode
@@ -1213,8 +1214,11 @@
                                 BoxLayout:
                                     
                                     orientation:"horizontal"
+                                    CheckBox:
+                                        id:influxcameracheckbox
+                                        active:"True"
                                     Label:
-                                        text:"break off camera"
+                                        text:"Influx camera"
                                     Label:
                                         text:"Index (0-4)"
                                         
@@ -1222,7 +1226,24 @@
                                         text:"0"
                                         id:breakoffcam
                                 BoxLayout:
+
+                                BoxLayout:
                                     
+                                    orientation:"horizontal"
+                                    CheckBox:
+                                        id:jazzcameracheckbox
+                                        
+
+                                    Label:
+                                        text:"Jazz camera"
+                                    Label:
+                                        text:"break-off camera"
+                                        
+                                    TextInput:
+                                        text:"rtsp://192.168.111.3/mpeg4/2/media.amp"
+                                        id:jazzbreakoffcam
+                                BoxLayout:
+
                                 BoxLayout:
                                     
                                     orientation:"horizontal"
